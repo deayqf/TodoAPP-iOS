@@ -39,19 +39,6 @@ class AddTaskViewController: UIViewController, AddTaskModelProtocol
         self.dismiss( animated: true, completion: nil )
     }
     
-    @IBAction func dateChanged( _ sender: UIDatePicker )
-    {
-        let components = Calendar.current.dateComponents( [ .year, .month, .day ], from: sender.date )
-        if let year  = components.year,
-           let month = components.month,
-           let day   = components.day
-        {
-            print( year )
-            print( month )
-            print( day )
-        }
-    }
-    
     @IBAction func initiateAddTask( _ sender: UIButton )
     {
         if let title = title_field.text,
